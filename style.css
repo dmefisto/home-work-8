@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    transition: all .1s ease-in;
+}
+
+body {
+    /* max-width: 793px; */
+    margin: auto;
+    border: 10px solid #FFFFFF;
+}
+
+.header{
+    text-align: center;
+    background-color: #4A4F56;
+    color: #FF8984;
+    height: 82px;
+}
+
+.header h1 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    padding: 19px 0 4px;
+}
+
+.header p {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 12px;
+}
+
+.shopping-list {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 45px;
+    background-color: #3B3F45;
+    height: 100vh;
+}
+
+.shopping-list ul{
+    list-style: none;
+    width: 534px;
+    margin: auto;
+    color: #FFFFFF;
+}
+
+.shopping-list li {
+    max-width: 534px;
+    height: 45px;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: left;
+    background-color: #88839E;
+    padding: 12px;
+}
+
+li:nth-child(2) {                                           /*Есть вопрос */
+    background-color: #7A7593;
+}
+
+li:nth-child(4) {
+    background-color: #7A7593;
+}
+
+li:nth-child(6) {
+    background-color: #7A7593;
+
+}
+.lower-text {
+    font-size: 11px;
+    vertical-align: 2px;
+}
+
+.lower-text::after {
+    content: ")";
+} 
+
+.lower-text::before {
+    content: "(";
+}   
+
+li:hover {
+    border-top: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    background-color: #625E77;
+}
+
+li:active {
+    background-color: #FF8984;
+}
+
+button {
+    width: 534px;
+    height: 45px;
+    font-size: 18px;
+    line-height: 21px;
+    border-width: 0px;
+    background-color: #4A4F56;
+    color: #FF8984;
+    margin-top: 45px;
+}
+
+input {
+    width: 19px;
+    height: 19px;
+    margin-right: 16px;
+}
+
+.check-box:checked + label {
+    text-decoration: line-through;
+}
