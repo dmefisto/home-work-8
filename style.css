@@ -12,7 +12,6 @@
 body {
     /* max-width: 793px; */
     margin: auto;
-    border: 10px solid #FFFFFF;
 }
 
 .header{
@@ -20,19 +19,19 @@ body {
     background-color: #4A4F56;
     color: #FF8984;
     height: 82px;
+    padding: 19px 0 12px;
 }
 
 .header h1 {
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
-    padding: 19px 0 4px;
+    margin-bottom: 4px;
 }
 
 .header p {
     font-size: 16px;
     line-height: 19px;
-    margin-bottom: 12px;
 }
 
 .shopping-list {
@@ -40,7 +39,7 @@ body {
     justify-content: center;
     padding: 20px 0 45px;
     background-color: #3B3F45;
-    height: 100vh;
+    height: calc(100vh - 82px);
 }
 
 .shopping-list ul{
@@ -58,23 +57,25 @@ body {
     text-align: left;
     background-color: #88839E;
     padding: 12px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    vertical-align: middle;
 }
 
-li:nth-child(2) {                                           /*Есть вопрос */
+li:nth-child(2n) {                                           
     background-color: #7A7593;
 }
-
-li:nth-child(4) {
-    background-color: #7A7593;
+li .label {
+    display: block;
+    cursor: pointer;
+    height: 100%;
+}
+.label span{
+    vertical-align: 2px;
 }
 
-li:nth-child(6) {
-    background-color: #7A7593;
-
-}
 .lower-text {
     font-size: 11px;
-    vertical-align: 2px;
 }
 
 .lower-text::after {
@@ -95,7 +96,10 @@ li:active {
     background-color: #FF8984;
 }
 
-button {
+.shopping_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 534px;
     height: 45px;
     font-size: 18px;
@@ -112,6 +116,10 @@ input {
     margin-right: 16px;
 }
 
-.check-box:checked + label {
+.check-box:checked + span {
     text-decoration: line-through;
+    background-color:#7A7593;
 }
+/* label + .check-box:checked {
+    text-decoration: line-through;
+} */
