@@ -66,10 +66,12 @@ li:nth-child(2n) {
     background-color: #7A7593;
 }
 li .label {
-    display: block;
+    display: flex;
+    align-items: stretch;
     cursor: pointer;
     height: 100%;
 }
+
 .label span{
     vertical-align: 2px;
 }
@@ -118,7 +120,7 @@ input {
 
 .check-box:checked + span {
     text-decoration: line-through;
-    background-color:#7A7593;
+    opacity: 50%;
 }
 /* label + .check-box:checked {
     text-decoration: line-through;
